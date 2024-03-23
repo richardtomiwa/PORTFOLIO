@@ -27,7 +27,7 @@ img{
 }
 
 body{
-    background-image: url(body-bg.jpg);
+    background-image: url(assets/body-bg.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -44,7 +44,7 @@ body.image-active{
 }
 
 body.dark{
-    background-image: url(body-bg-dark.jpg);
+    background-image: url(assets/body-bg-dark.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
