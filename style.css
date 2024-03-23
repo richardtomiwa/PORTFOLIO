@@ -1,3 +1,38 @@
+
+
+#preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 3;
+
+}
+
+.loader {
+    width: 30px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: white;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+
+
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+
 html{
     color: rgb(10, 10, 10);
     width: 99vw;
@@ -27,7 +62,7 @@ img{
 }
 
 body{
-    background-image: url(assets/body-bg.jpg);
+    background-image: url('assets/body-bg.jpg') !important;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -44,7 +79,7 @@ body.image-active{
 }
 
 body.dark{
-    background-image: url(assets/body-bg-dark.jpg);
+    background-image: url('assets/body-bg-dark.jpg') !important;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -56,6 +91,7 @@ body.dark{
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 
 li{
@@ -87,7 +123,7 @@ font-weight:900;
     position: fixed;
     height: 3px;
     top: 0;
-    z-index: 273772;
+    z-index: 2;
     background-color: transparent;
     background-image: linear-gradient(to right,  red , purple , green , blue);
     scale: 0 1;
@@ -497,6 +533,14 @@ to{scale: 1 1;}
 
 
 @media only screen and (max-width:740px) {
+    body{
+        background-image: url(assets/body-bg-740.jpg);
+    }
+
+    body.dark{
+        background-image: url(assets/body-bg-dark-740.jpg);
+    }
+
     section.intro>div.dark-me,section.intro>div.me{
         width: 50vw;
         height: 425px;
