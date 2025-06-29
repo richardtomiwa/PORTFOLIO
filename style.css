@@ -61,9 +61,8 @@ a{
     text-decoration: none;
 }
 
-.my-atropos {
-  width: 100%;
-  height: 70vh;
+.my-atropos, .my-atropos2 {
+  width: 400px;
   background-color: transparent;
   z-index: 5;
 filter: brightness(0.5);
@@ -74,9 +73,12 @@ transition: filter 0.5s;
     filter: brightness(1);
 }
 
+.my-atropos2:hover{
+    filter: brightness(1);
+}
+
 div.atropos-inner{
 width: 100%;
-height: 100%;
 position: relative;
 }
 
@@ -452,27 +454,38 @@ div.info>p>span{
     color: rgba(255, 255, 255, 0.7);
 }
 
-section.services{
+section.services,section.projects{
     position: relative;
     background: rgb(1, 1, 32);
     padding: 0px 30px;
 }
 
-section.services>h1{
+section.services>h1,section.projects>h1{
     -webkit-text-stroke: 1px white;
     color: transparent;
     font-size: 42px;
 }
 
+section.projects>h1{
+    margin-bottom: 60px;
+}
 
-div.service{
+
+div.service,div.project-wrapper{
     display: flex;
     flex-wrap: wrap;
     gap: 5vw;
     justify-content: center;
 }
 
-div.web{
+div.project>img{
+    width: 100%;
+    opacity: 0.7;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+div.web, div.project{
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -486,8 +499,11 @@ div.web{
     height: 500px;
 }
 
+div.project{
+    height: max-content;
+}
 
-div.web:nth-of-type(2){
+div.web:nth-of-type(2),div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project{
         background:linear-gradient( to bottom , rgb(53, 2, 103) 0%, rgb(1, 1, 32) 95% );
 }
 
@@ -503,7 +519,7 @@ div.web>svg{
     height: 100px;
 }
 
-div.web>h4{
+div.web>h4, div.project>h4{
   font-size: 28px;
 }
 
@@ -516,6 +532,34 @@ section.testimonials{
         gap: 30px;
         padding-bottom: 50px;
 }
+
+div.project{
+    justify-content: start;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.skills{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.atropos:nth-of-type(1)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid rgb(138, 79, 7);
+}
+
+div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 1px solid rgb(53, 2, 103);
+}
+
 
 
 
@@ -930,5 +974,25 @@ div.testimonial-wrapper{
     width: 90%;
 
 }
+
+
+
+div.atropos:nth-of-type(1)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+    font-size: 10px;
+}
+
+
+div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+    font-size: 10px;
+}
+
+div.project{
+    width: 100%;
+    height: max-content;
+}
+.my-atropos,.my-atropos2 {
+  width: 95%;
+}
+
 
 }
