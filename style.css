@@ -310,7 +310,7 @@ button.download-cv{
     width: 200px;
 }
 
-button.download-cv>a{
+button.download-cv>a,button.download-cv>p{
     height: 100%;
     width: 100%;
     display: flex;
@@ -320,9 +320,24 @@ button.download-cv>a{
     position: relative;
     border-radius: 0px;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+scale: 1;
 }
 
-button.download-cv>a.after::after{
+
+button.download-cv>p{
+    padding: 5px 10px;
+    font-size: 15px;
+    color: white;
+}
+
+
+button.download-cv>a:active,button.download-cv>p:active{
+scale: 0.8;
+}
+button.download-cv>a:active::after,button.download-cv>p:active::after{
+scale: 1.1;
+}
+button.download-cv>a.after::after,button.download-cv>p.after::after{
     content: "";
     position: absolute;
     left: 0px;
@@ -460,11 +475,16 @@ section.services,section.projects{
     padding: 0px 30px;
 }
 
-section.services>h1,section.projects>h1{
+section>h1{
     -webkit-text-stroke: 1px white;
     color: transparent;
     font-size: 42px;
 }
+
+section.projects{
+    padding-bottom: 100px;
+}
+
 
 section.projects>h1{
     margin-bottom: 60px;
@@ -632,55 +652,133 @@ div.testimonial-wrapper>div>h4{
 
 
 
-div.hobbies{
+section.get-in-touch{
+        background: rgb(1, 1, 72);
+        padding: 30px;
+}
+
+section.get-in-touch>div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+section.get-in-touch>div>input{
+    width: 25%;
+    padding: 15px;
+    border: 0px;
+    background: rgb(1, 1, 32);
+    outline: none;
+    color: white;
+}
+
+
+section.get-in-touch>div>textarea{
+    width: 35%;
+    min-height: 105px;
+    color: black;
+    padding: 15px;
+        background: rgb(1, 1, 32);
+    outline: none;
+    color: white;
+    border: 0px;
+}
+
+div.popup-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    top: 0px;
+    z-index: -20;
     display: flex;
     justify-content: center;
+    opacity: 0;
     align-items: center;
+    transition: all 0.9s;
+}
+
+div.popup{
+    width: 35%;
+    height: max-content;
+    padding: 30px 0px;
+        background: #FDF4DC;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        color: black;
+        gap: 30px;
+box-shadow:  24px 24px 68px #220466,
+             -24px -24px 68px #8610ff;
+}
+
+div.popup>h2,div.popup>h2>p{
+display: flex;
+gap: 8px;
+font-size: 32px;
+
+}
+
+
+div.popup>p.profile{
+
+background-color: black;
+width:100px ;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 42px;
+border-radius: 50%;
+color: white;
+text-transform: uppercase;
+}
+
+.get-started{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.username{
+    text-transform: capitalize;
+}
+
+p.action{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    width: 100%;
     gap: 10px;
-    flex-direction: row;
-flex-wrap: wrap;
 }
 
+p.action>svg{
+fill:rgb(138, 7, 120) ;
+width: 32px;
+height: 32px;
+}
 
-div.hobbies>h4{
+p.action>span{
+width: 70%;
+text-align: start;
     font-size: 15px;
-        -webkit-text-stroke: 1px white;
-    text-stroke:1px white;
-    color: transparent;
-    font-weight: 100;
-    width: 17%;
 }
 
-div.hobbies>p{
-    background:rgba(255, 255, 255, 0.1);
-    padding:auto;
-    padding-top:10px ;
-    padding-bottom: 10px;
-    font-size: medium;
-    width: 17%;
-    border: 1px solid white;
-    border-radius: 24px;
+p.action:nth-of-type(3)>svg{
+fill: rgb(3, 97, 205) ;
 }
 
 
-/* 
-@keyframes glitch{
-    0%{
-           text-shadow: 0 0 red, cyan 0 0;
-    }
-
-    45%{
-            text-shadow: -4px 0 red, cyan 4px 0;
-    }
-
-    90%{
-         text-shadow: 4px 0 red, cyan -4px 0;
-    }
-
-    100%{
-                   text-shadow: 0 0 red, cyan 0 0;
-    }
-} */
+p.action:nth-of-type(4)>svg{
+fill: rgba(62, 232, 88,1) ;
+}
 
 
 @media only screen and (max-width:767px) {
@@ -724,7 +822,7 @@ width: 100%;
 }
 
 
-div.projects{
+section.projects{
 flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -755,8 +853,8 @@ svg.richard{
     width: 100px;
     height: 100px;
     position: absolute;
-right: 0;
-top: 60px;
+right: 10px;
+top: 70px;
 }
 
 
@@ -825,6 +923,8 @@ button.download-cv>a{
     border-radius: 0px;
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 
 button.download-cv>a.after::after{
     content: "";
@@ -991,7 +1091,25 @@ div.project{
     height: max-content;
 }
 .my-atropos,.my-atropos2 {
-  width: 95%;
+  width: 100%;
+}
+
+
+
+div.popup{
+    width: 85vw;
+}
+
+
+
+section.get-in-touch>div>input{
+    width: 100%;
+
+}
+
+section.get-in-touch>div>textarea{
+    width: 100%;
+
 }
 
 
