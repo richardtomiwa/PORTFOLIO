@@ -3,12 +3,8 @@
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
-    overflow-y: initial !important;
 }
 
-html{
-overflow-x: hidden;
-}
 
 body{
     background-color: darkblue;
@@ -21,7 +17,6 @@ justify-content: center;
 box-sizing: border-box;
     scroll-behavior: smooth;
 
-max-width: 100vw;
 
 }
 
@@ -210,11 +205,6 @@ p {
   text-align: center;
   line-height: 1.3;
 }
-
-svg{
-    overflow: visible;
-}
-
 
 
 .text-wrap-svg{
@@ -487,7 +477,6 @@ section.services,section.projects{
     position: relative;
     background: rgb(1, 1, 32);
     padding: 0px 10px;
-            overflow-x: hidden;
 }
 
 section>h1{
