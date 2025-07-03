@@ -482,13 +482,14 @@ section.services,section.projects{
     position: relative;
     background: rgb(1, 1, 32);
     padding: 0px 10px;
-            overflow-x:visible;
+            overflow-x: hidden;
 }
 
 section>h1{
     -webkit-text-stroke: 1px white;
     color: transparent;
     font-size: 42px;
+    max-width: 100%;
 }
 
 section.projects{
