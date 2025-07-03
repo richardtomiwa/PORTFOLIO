@@ -902,6 +902,7 @@ div.loader {
 *{
     overflow-x: hidden;
     max-width: 100vw;
+    overflow-y: visible;
 }
 
     section.intro{
