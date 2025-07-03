@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 
 body{
     background-color: darkblue;
@@ -16,7 +20,7 @@ body{
 justify-content: center;
 box-sizing: border-box;
     scroll-behavior: smooth;
-
+overflow: hidden;
 
 }
 
@@ -899,9 +903,6 @@ div.loader {
 
 @media only screen and (max-width:767px) {
 
-html{
-    overflow-x: clip;
-}
     section.intro{
         flex-direction: column;
         width: 100%;
