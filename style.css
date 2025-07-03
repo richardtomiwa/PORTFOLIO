@@ -1,13 +1,14 @@
-html{
-
-}
 
 *{
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
-
 }
+
+html{
+overflow: hidden;
+}
+
 body{
     background-color: darkblue;
     color: white;
@@ -20,7 +21,7 @@ box-sizing: border-box;
     scroll-behavior: smooth;
 
 max-width: 100vw;
-overflow-x: hidden;
+
 }
 
 header{
