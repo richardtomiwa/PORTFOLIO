@@ -20,7 +20,7 @@ body{
 justify-content: center;
 box-sizing: border-box;
     scroll-behavior: smooth;
-overflow: hidden;
+overflow-x: hidden;
 
 }
 
