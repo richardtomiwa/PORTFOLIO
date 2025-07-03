@@ -264,6 +264,10 @@ div.project-text>p{
     text-align: center;
 }
 
+section{
+    max-width: 100vw;
+}
+
 section.intro{
     display: flex;
     justify-content: space-evenly;
