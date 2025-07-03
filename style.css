@@ -1,19 +1,26 @@
+html{
+
+}
+
 *{
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
+
 }
 body{
     background-color: darkblue;
     color: white;
     background-size: cover;
-    overflow-x: hidden;
-    max-width: 100vw;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
   flex-direction:column;
 justify-content: center;
 box-sizing: border-box;
+    scroll-behavior: smooth;
+
+max-width: 100vw;
+overflow-x: hidden;
 }
 
 header{
@@ -304,13 +311,13 @@ div.sidetwo{
     line-height: 35px;
 }
 
-button.download-cv{
+.download-cv{
     background-color: transparent;
     border: 0px;
     width: 200px;
 }
 
-button.download-cv>a,button.download-cv>p{
+.download-cv>a,.download-cv>p{
     height: 100%;
     width: 100%;
     display: flex;
@@ -324,20 +331,20 @@ scale: 1;
 }
 
 
-button.download-cv>p{
+.download-cv>p{
     padding: 5px 10px;
     font-size: 15px;
     color: white;
 }
 
 
-button.download-cv>a:active,button.download-cv>p:active{
+.download-cv>a:active,.download-cv>p:active{
 scale: 0.8;
 }
-button.download-cv>a:active::after,button.download-cv>p:active::after{
+.download-cv>a:active::after,.download-cv>p:active::after{
 scale: 1.1;
 }
-button.download-cv>a.after::after,button.download-cv>p.after::after{
+.download-cv>a.after::after,.download-cv>p.after::after{
     content: "";
     position: absolute;
     left: 0px;
@@ -367,14 +374,14 @@ button.download-cv>a.after::after,button.download-cv>p.after::after{
     gap: 20px;
 }
 
-div.social-media>a{
+div.social-media>a,ul>li>a{
     padding: 0px;
     max-width: 15%;
         background: transparent;
     background-color: transparent;
 }
 
-div.social-media>a>svg{
+div.social-media>a>svg,ul>li>a>svg{
     width: 40px;
     height: 40px;
 }
@@ -404,8 +411,9 @@ div.about{
     align-items: center;
     gap: 30px;
     position: relative;
-    top: -200px;
+    top: -150px;
     left: 5%;
+    z-index: 120;
 }
 
 
@@ -472,7 +480,8 @@ div.info>p>span{
 section.services,section.projects{
     position: relative;
     background: rgb(1, 1, 32);
-    padding: 0px 30px;
+    padding: 0px 10px;
+            overflow-x:visible;
 }
 
 section>h1{
@@ -494,8 +503,9 @@ section.projects>h1{
 div.service,div.project-wrapper{
     display: flex;
     flex-wrap: wrap;
-    gap: 5vw;
+    gap: 70px;
     justify-content: center;
+    margin-top: 50px;
 }
 
 div.project>img{
@@ -523,7 +533,7 @@ div.project{
     height: max-content;
 }
 
-div.web:nth-of-type(2),div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project{
+div.web:nth-of-type(2),div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project,div.mobile:nth-of-type(even){
         background:linear-gradient( to bottom , rgb(53, 2, 103) 0%, rgb(1, 1, 32) 95% );
 }
 
@@ -566,14 +576,14 @@ div.skills{
     width: 100%;
 }
 
-div.atropos:nth-of-type(1)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+div.atropos:nth-of-type(1)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p, div.project:nth-of-type(odd)>div.skills>p{
     font-size: 15px;
     padding: 5px 10px;
     border-radius: 12px;
     border: 1px solid rgb(138, 79, 7);
 }
 
-div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p, div.project:nth-of-type(even)>div.skills>p{
     font-size: 15px;
     padding: 5px 10px;
     border-radius: 12px;
@@ -585,7 +595,7 @@ div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inne
 
 section.testimonials>h4{
 width: 100vw;
-padding: 30px;
+padding: 10px;
     font-size: 42px;
     -webkit-text-stroke:1px white;
     color: transparent;
@@ -608,6 +618,7 @@ padding: 30px;
 }
 
 div.testimonial-section-mobile{
+    width: 100%;
     display: none;
 }
 
@@ -615,12 +626,11 @@ div.testimonial-wrapper{
     display: flex;
     width: 40%;
         background: rgb(1, 1, 72);
-        padding: 30px;
+        padding: 10px;
         border-radius:10px;
         min-height: 200px;
         justify-content: space-between;
         align-items: center;
-        padding: 30px;
         gap: 5%;
 }
 
@@ -654,18 +664,50 @@ div.testimonial-wrapper>div>h4{
 
 section.get-in-touch{
         background: rgb(1, 1, 72);
-        padding: 30px;
+        padding: 100px 10px;
+        position: relative;
 }
 
-section.get-in-touch>div{
+div.touch{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+div.touch>section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+div.touch>section>p{
+text-align: start;
+font-size: 18px;
+}
+
+.map{
+    width: 45%;
+}
+section.get-in-touch>div>div{
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
+    width: 45%;
 }
 
-section.get-in-touch>div>input{
-    width: 25%;
+section.get-in-touch>div>div>p{
+    color: rgba(255, 255, 255, 0.7);
+    text-align: start;
+}
+
+section.get-in-touch>div>div>input{
+    width: 75%;
     padding: 15px;
     border: 0px;
     background: rgb(1, 1, 32);
@@ -674,8 +716,8 @@ section.get-in-touch>div>input{
 }
 
 
-section.get-in-touch>div>textarea{
-    width: 35%;
+section.get-in-touch>div>div>textarea{
+    width: 100%;
     min-height: 105px;
     color: black;
     padding: 15px;
@@ -722,6 +764,10 @@ font-size: 32px;
 
 }
 
+div.mobile{
+    display: none;
+}
+
 
 div.popup>p.profile{
 
@@ -744,6 +790,7 @@ text-transform: uppercase;
     border: 0px;
     font-size: 18px;
     border-radius: 4px;
+    z-index: 10;
 }
 
 .username{
@@ -781,10 +828,80 @@ fill: rgba(62, 232, 88,1) ;
 }
 
 
+dotlottie-player{
+    margin-top: -100px;
+    margin-bottom: -100px;
+    display: none;
+    z-index: 0;
+}
+
+
+section.motivation{
+    background-image: url("sunset.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100vw;
+}
+section.motivation>h4{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: brightness(0.5);
+    font-size: 42px;
+    text-align: center;
+    line-height: 50px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10px;
+    align-items: center;
+}
+
+footer>h4{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+footer>p{
+    font-size: 18px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* HTML: <div class="loader"></div> */
+div.loader {
+  width: 15px;
+  height: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+  display: none;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #ffffff, -20px 0 #0002;background: #b1afaf }
+    33% {box-shadow: 20px 0 #000, -20px 0 rgb(255, 255, 255);background: rgb(255, 255, 255)}
+    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: rgb(114, 114, 114)}
+    100%{box-shadow: 20px 0 rgb(255, 255, 255),-20px 0 #000; background: #000 }
+}
+
+
+
+
 @media only screen and (max-width:767px) {
     section.intro{
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         padding: 0px 10px;
         gap: 10px;
         justify-content: space-evenly;
@@ -826,6 +943,7 @@ section.projects{
 flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
 }
 
 div.project-text{
@@ -856,7 +974,6 @@ svg.richard{
 right: 10px;
 top: 70px;
 }
-
 
 section.intro{
     display: flex;
@@ -906,13 +1023,13 @@ div.sidetwo{
     line-height: 35px;
 }
 
-button.download-cv{
+.download-cv{
     background-color: transparent;
     border: 0px;
     width: 200px;
 }
 
-button.download-cv>a{
+.download-cv>a{
     height: 100%;
     width: 100%;
     display: flex;
@@ -926,7 +1043,7 @@ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
 
 
-button.download-cv>a.after::after{
+.download-cv>a.after::after{
     content: "";
     position: absolute;
     left: 0px;
@@ -982,7 +1099,7 @@ img.richard{
 }
 div.about{
     padding: 5%;
-    width: 100vw;
+    width: 100%;
     left: 0;
 }
 
@@ -1015,7 +1132,6 @@ div.info>p{
     font-size: 16px;
 
 }
-
 
 
 
@@ -1077,12 +1193,12 @@ div.testimonial-wrapper{
 
 
 
-div.atropos:nth-of-type(1)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+div.project:nth-of-type(1)>div.skills>p{
     font-size: 10px;
 }
 
 
-div.atropos:nth-of-type(2)>div.atropos-scale>div.atropos-rotate>div.atropos-inner>div.project>div.skills>p{
+div.project:nth-of-type(2)>div.skills>p{
     font-size: 10px;
 }
 
@@ -1090,8 +1206,13 @@ div.project{
     width: 100%;
     height: max-content;
 }
-.my-atropos,.my-atropos2 {
+div.my-atropos,div.my-atropos2 {
   width: 100%;
+  display: none;
+}
+
+div.mobile{
+    display: flex;
 }
 
 
@@ -1102,14 +1223,46 @@ div.popup{
 
 
 
-section.get-in-touch>div>input{
+section.get-in-touch>div>div>input{
     width: 100%;
 
 }
 
-section.get-in-touch>div>textarea{
+section.get-in-touch>div>div>textarea{
     width: 100%;
 
+}
+
+div.touch{
+flex-direction: column;
+align-items: start;
+gap: 40px;
+}
+
+.map{
+    width: 100%;
+}
+
+div.touch>section{
+    align-items: start;
+}
+
+section.get-in-touch>div>div{
+    width: 100%;
+}
+
+section.motivation{
+width: 100%;
+}
+
+section.motivation>h4{
+font-size: 36px;
+}
+
+
+footer{
+flex-direction: column;
+gap: 15px;
 }
 
 
