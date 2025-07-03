@@ -898,6 +898,11 @@ div.loader {
 
 
 @media only screen and (max-width:767px) {
+
+*{
+    overflow-x: hidden;
+}
+
     section.intro{
         flex-direction: column;
         width: 100%;
