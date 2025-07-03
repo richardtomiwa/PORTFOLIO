@@ -18,7 +18,7 @@
 
       async function sendMessage() {
         try {
-          const response = await fetch("api/send.php", {
+          const response = await fetch("../api/send.php", {
             method: "POST",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
@@ -40,7 +40,7 @@
 
       async function getname() {
         try {
-          const data = await fetch("api/get.php", {
+          const data = await fetch("../api/get.php", {
             method: "POST",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
