@@ -846,7 +846,6 @@ section.motivation{
     height: 300px;
     max-width: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
 section.motivation>h4{
     height: 100%;
