@@ -662,6 +662,7 @@ section.get-in-touch{
         background: rgb(1, 1, 72);
         padding: 100px 10px;
         position: relative;
+        overflow-x: hidden;
 }
 
 div.touch{
@@ -840,6 +841,7 @@ section.motivation{
     height: 300px;
     max-width: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 section.motivation>h4{
     height: 100%;
