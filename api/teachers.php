@@ -10,20 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit();
 }
-
-// Simple events API with JSON file persistence
-// Supports GET (list) and POST (add/delete) using JSON payloads
-
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
-
-// Handle preflight requests
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(204);
-    exit();
-}
-
+echo "hello";
 $storageFile = __DIR__ . '/teachers.json';
 
 function readEvents($file) {
@@ -138,3 +125,4 @@ echo json_encode(["error"=>"method not allowed"]);
 exit();
 
 ?>
+
