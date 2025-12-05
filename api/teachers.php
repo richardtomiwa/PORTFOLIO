@@ -4,13 +4,14 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type:application/json");
 
 // Handle preflight requests
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit();
 }
-echo "hello";
+echo json_encode("hello");
 /* $storageFile = __DIR__ . '/teachers.json';
 
 function readEvents($file) {
@@ -125,5 +126,6 @@ echo json_encode(["error"=>"method not allowed"]);
 exit();
 */
 ?>
+
 
 
