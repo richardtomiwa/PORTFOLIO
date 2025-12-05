@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 echo "hello";
-$storageFile = __DIR__ . '/teachers.json';
+/* $storageFile = __DIR__ . '/teachers.json';
 
 function readEvents($file) {
     if (!file_exists($file)) return [];
@@ -123,6 +123,7 @@ if ($method === 'POST') {
 http_response_code(405);
 echo json_encode(["error"=>"method not allowed"]);
 exit();
-
+*/
 ?>
+
 
